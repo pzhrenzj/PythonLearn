@@ -17,6 +17,16 @@ def XiWan():
             if g*5+3*m+1/3*x==100 and g+m+x==100:
                 return('公鸡:'+str(g)+'只，母鸡:'+str(m)+'只，小鸡:'+str(x)+'只')
 
+def lsdd():
+# 有垛厚五尺（旧制长度单位，1尺=10寸）的墙壁， 大小两只老鼠同时从墙的两面，沿一直线相对打洞。大鼠第一天打进1尺，以后每天的进度为前一天的2倍；小鼠第一天也打进1尺，以后每天的进度是前一天的一半。它们几天可以相遇？相遇时各打进了多少？\
+    bigl=10
+    smaill=10
+    print('===第1天，大老鼠打进了'+str(bigl)+',小老鼠打进了'+str(smaill))
+    for bigmouse in range(2,100):
+        bigl=bigl+bigl*2
+        smaill=smaill+1/(smaill*2)
+        print('===第'+str(bigmouse)+'天，大老鼠打进了'+str(bigl)+',小老鼠打进了'+str(smaill))
+        if bigl+smaill==50:
+            return ('它们'+str(bigmouse)+'天可以相遇,相遇时大老鼠打进了'+str(bigl)+',小老鼠打进了'+str(smaill))
 
-
-print(XiWan())
+print(lsdd())
