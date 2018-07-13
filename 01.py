@@ -23,7 +23,8 @@ def lsdd():
     smaill=10
     print('===第1天，大老鼠打进了'+str(bigl)+',小老鼠打进了'+str(smaill))
     for bigmouse in range(2,100):
-        bigl=bigl+bigl*2
+        bigl=1
+        bigl=bigl+(bigmouse-1)*20
         smaill=smaill+1/(smaill*2)
         print('===第'+str(bigmouse)+'天，大老鼠打进了'+str(bigl)+',小老鼠打进了'+str(smaill))
         if bigl+smaill==50:
